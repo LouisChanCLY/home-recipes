@@ -21,3 +21,8 @@ Garlic and thyme sweated low in butter on gentle heat — no browning, just frag
 Pasta cooked per pack instructions. Splash of pasta water reserved before draining.
 Tossed pasta through the butter off heat with pasta water to emulsify into a light sauce.
 Classic Northern Italian — no cream, no cheese, let the prosciutto filling do the work.
+
+## Cook History
+| Date | Portions | Calories | Notes |
+|------|----------|----------|-------|
+| 2026-03-07 | 1 | 477 | First time. Lunch. |
