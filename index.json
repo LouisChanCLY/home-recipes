@@ -1,0 +1,14 @@
+[
+  {
+    "dish": "Prosciutto Cappelletti with Butter & Thyme",
+    "cuisine": "italian",
+    "date": "2026-03-07",
+    "portions": 1,
+    "calories": 477,
+    "protein": 18,
+    "carbs": 53.5,
+    "fat": 15.1,
+    "tags": ["pasta", "quick", "lunch"],
+    "file": "recipes/italian/prosciutto-cappelletti-butter-thyme.md"
+  }
+]
