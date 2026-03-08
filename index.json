@@ -70,18 +70,32 @@
     "file": "recipes/cantonese/dried-scallop-braised-cabbage.md"
   },
   {
-    "dish": "Sea Bass with Okra, Sweet Potato & Yuzu Dressing",
+    "dish": "Oven Baked Sea Bass",
     "cuisine": "fusion",
     "first_made": "2026-03-02",
     "last_made": "2026-03-02",
     "cook_history": ["2026-03-02"],
     "portions": 3,
-    "calories": 600,
+    "calories": 166,
     "protein": 0,
     "carbs": 0,
     "fat": 0,
-    "tags": ["fish", "seabass", "dinner", "oven", "yuzu"],
-    "file": "recipes/fusion/seabass-okra-sweet-potato-yuzu.md"
+    "tags": ["fish", "seabass", "oven", "dinner"],
+    "file": "recipes/fusion/oven-baked-sea-bass.md"
+  },
+  {
+    "dish": "Roasted Sweet Potato, Okra & Cherry Tomatoes",
+    "cuisine": "fusion",
+    "first_made": "2026-03-02",
+    "last_made": "2026-03-02",
+    "cook_history": ["2026-03-02"],
+    "portions": 3,
+    "calories": 247,
+    "protein": 0,
+    "carbs": 0,
+    "fat": 0,
+    "tags": ["veg", "roasted", "side", "dinner", "yuzu"],
+    "file": "recipes/fusion/roasted-sweet-potato-okra-cherry-tomatoes.md"
   },
   {
     "dish": "日式炊飯 (Japanese Salmon Rice)",
