@@ -84,8 +84,8 @@
     "file": "recipes/fusion/seabass-okra-sweet-potato-yuzu.md"
   },
   {
-    "dish": "Salmon & Rice",
-    "cuisine": "simple",
+    "dish": "日式炊飯 (Japanese Salmon Rice)",
+    "cuisine": "japanese",
     "first_made": "2026-02-23",
     "last_made": "2026-02-23",
     "cook_history": ["2026-02-23"],
@@ -94,7 +94,7 @@
     "protein": 0,
     "carbs": 0,
     "fat": 0,
-    "tags": ["salmon", "rice", "quick", "dinner", "simple"],
+    "tags": ["japanese", "salmon", "rice", "炊飯", "dinner"],
     "file": "recipes/simple/salmon-and-rice.md"
   },
   {
