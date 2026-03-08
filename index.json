@@ -29,7 +29,7 @@
   },
   {
     "dish": "花雕雞 (Hua Diao Chicken)",
-    "cuisine": "cantonese",
+    "cuisine": "shanghainese",
     "first_made": "2026-02-19",
     "last_made": "2026-02-19",
     "cook_history": ["2026-02-19"],
@@ -38,8 +38,8 @@
     "protein": 0,
     "carbs": 0,
     "fat": 0,
-    "tags": ["cantonese", "chicken", "rice", "wine-braise", "dinner"],
-    "file": "recipes/cantonese/hua-diao-chicken.md"
+    "tags": ["shanghainese", "chicken", "rice", "wine-braise", "dinner"],
+    "file": "recipes/shanghainese/hua-diao-chicken.md"
   },
   {
     "dish": "洋蔥蝦仁炒蛋 + 瑤柱浸黃芽白",
