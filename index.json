@@ -42,18 +42,32 @@
     "file": "recipes/cantonese/hua-diao-chicken.md"
   },
   {
-    "dish": "洋蔥蝦仁炒蛋 + 瑤柱浸黃芽白",
+    "dish": "洋蔥蝦仁炒蛋",
     "cuisine": "cantonese",
     "first_made": "2026-03-01",
     "last_made": "2026-03-01",
     "cook_history": ["2026-03-01"],
-    "portions": 3,
-    "calories": 772,
+    "portions": 2.5,
+    "calories": 378,
     "protein": 0,
     "carbs": 0,
     "fat": 0,
-    "tags": ["cantonese", "egg", "prawn", "scallop", "dinner", "two-dish"],
-    "file": "recipes/cantonese/onion-prawn-egg-dried-scallop-cabbage.md"
+    "tags": ["cantonese", "egg", "prawn", "stir-fry", "dinner"],
+    "file": "recipes/cantonese/onion-prawn-egg-stir-fry.md"
+  },
+  {
+    "dish": "瑤柱浸黃芽白",
+    "cuisine": "cantonese",
+    "first_made": "2026-03-01",
+    "last_made": "2026-03-01",
+    "cook_history": ["2026-03-01"],
+    "portions": 2.5,
+    "calories": 150,
+    "protein": 0,
+    "carbs": 0,
+    "fat": 0,
+    "tags": ["cantonese", "scallop", "cabbage", "braise", "dinner"],
+    "file": "recipes/cantonese/dried-scallop-braised-cabbage.md"
   },
   {
     "dish": "Sea Bass with Okra, Sweet Potato & Yuzu Dressing",
