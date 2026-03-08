@@ -12,5 +12,19 @@
     "fat": 15.1,
     "tags": ["pasta", "quick", "lunch"],
     "file": "recipes/italian/prosciutto-cappelletti-butter-thyme.md"
+  },
+  {
+    "dish": "Prosciutto Cappelletti with Pesto, Toasted Pine Nuts & Yuzu Vinegar",
+    "cuisine": "italian",
+    "first_made": "2026-03-08",
+    "last_made": "2026-03-08",
+    "cook_history": ["2026-03-08"],
+    "portions": 1,
+    "calories": 624,
+    "protein": 21.3,
+    "carbs": 58.1,
+    "fat": 28.1,
+    "tags": ["pasta", "quick", "lunch", "pesto"],
+    "file": "recipes/italian/prosciutto-cappelletti-pesto.md"
   }
 ]
