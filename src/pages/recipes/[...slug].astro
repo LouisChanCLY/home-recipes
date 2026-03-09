@@ -46,7 +46,7 @@ const hasNutrition = calories > 0 || protein > 0 || carbs > 0 || fat > 0;
           <div class="stat portion-control">
             <div class="portion-buttons">
               <button class="portion-btn" id="portion-down" aria-label="Decrease portions">−</button>
-              <span class="val" id="portion-val" data-original={portions}>{portions}</span>
+              <input type="number" class="val portion-input" id="portion-val" data-original={portions} value={portions} min="0.5" max="20" step="0.5" />
               <button class="portion-btn" id="portion-up" aria-label="Increase portions">+</button>
             </div>
             <span class="label">Portions</span>
@@ -178,9 +178,29 @@ const hasNutrition = calories > 0 || protein > 0 || carbs > 0 || fat > 0;
     font-weight: 600;
   }
 
-  #portion-val {
-    min-width: 2ch;
+  .portion-input {
+    width: 3.5rem;
     text-align: center;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.2rem;
+    color: var(--text);
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    -moz-appearance: textfield;
+  }
+
+  .portion-input::-webkit-outer-spin-button,
+  .portion-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .portion-input:focus {
+    outline: none;
+    border-color: var(--accent);
   }
 
   .label {
@@ -281,7 +301,7 @@ const hasNutrition = calories > 0 || protein > 0 || carbs > 0 || fat > 0;
 </style>
 
 <script>
-  const portionVal = document.getElementById('portion-val')!;
+  const portionVal = document.getElementById('portion-val') as HTMLInputElement;
   const portionDown = document.getElementById('portion-down') as HTMLButtonElement;
   const portionUp = document.getElementById('portion-up') as HTMLButtonElement;
   const original = parseFloat(portionVal.dataset.original || '1');
@@ -346,7 +366,7 @@ const hasNutrition = calories > 0 || protein > 0 || carbs > 0 || fat > 0;
   portionDown.addEventListener('click', () => {
     if (current > 0.5) {
       current = current <= 1 ? current - 0.5 : current - 1;
-      portionVal.textContent = current.toString();
+      portionVal.value = current.toString();
       scaleValues();
       updateButtons();
     }
@@ -355,10 +375,32 @@ const hasNutrition = calories > 0 || protein > 0 || carbs > 0 || fat > 0;
   portionUp.addEventListener('click', () => {
     if (current < 20) {
       current = current < 1 ? current + 0.5 : current + 1;
-      portionVal.textContent = current.toString();
+      portionVal.value = current.toString();
       scaleValues();
       updateButtons();
     }
+  });
+
+  portionVal.addEventListener('input', () => {
+    const val = parseFloat(portionVal.value);
+    if (!isNaN(val) && val >= 0.5 && val <= 20) {
+      current = val;
+      scaleValues();
+      updateButtons();
+    }
+  });
+
+  portionVal.addEventListener('blur', () => {
+    const val = parseFloat(portionVal.value);
+    if (isNaN(val) || val < 0.5) {
+      current = 0.5;
+      portionVal.value = '0.5';
+    } else if (val > 20) {
+      current = 20;
+      portionVal.value = '20';
+    }
+    scaleValues();
+    updateButtons();
   });
 
   updateButtons();
