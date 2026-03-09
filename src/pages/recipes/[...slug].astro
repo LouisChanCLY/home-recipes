@@ -1,0 +1,237 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const recipes = await getCollection('recipes');
+  return recipes.map(recipe => ({
+    params: { slug: recipe.slug },
+    props: { recipe },
+  }));
+}
+
+interface Props {
+  recipe: CollectionEntry<'recipes'>;
+}
+
+const { recipe } = Astro.props;
+const { Content } = await recipe.render();
+const { dish, cuisine, date, portions, calories, protein, carbs, fat, tags } = recipe.data;
+const baseUrl = import.meta.env.BASE_URL;
+
+const dateStr = date ? new Date(date).toLocaleDateString('en-GB', {
+  day: 'numeric', month: 'short', year: 'numeric'
+}) : null;
+
+const hasNutrition = calories > 0 || protein > 0 || carbs > 0 || fat > 0;
+---
+
+<BaseLayout title={dish}>
+  <article>
+    <div class="container">
+      <a href={baseUrl} class="back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back
+      </a>
+
+      <header>
+        <div class="meta">
+          <span class="cuisine">{cuisine}</span>
+          {dateStr && <span class="date">{dateStr}</span>}
+        </div>
+        <h1>{dish}</h1>
+        <div class="stats">
+          <div class="stat">
+            <span class="val">{portions}</span>
+            <span class="label">Portions</span>
+          </div>
+          {hasNutrition && (
+            <>
+              {calories > 0 && <div class="stat"><span class="val">{calories}</span><span class="label">kcal</span></div>}
+              {protein > 0 && <div class="stat"><span class="val">{protein}g</span><span class="label">Protein</span></div>}
+              {carbs > 0 && <div class="stat"><span class="val">{carbs}g</span><span class="label">Carbs</span></div>}
+              {fat > 0 && <div class="stat"><span class="val">{fat}g</span><span class="label">Fat</span></div>}
+            </>
+          )}
+        </div>
+      </header>
+
+      <div class="content">
+        <Content />
+      </div>
+
+      {tags.length > 0 && (
+        <footer>
+          {tags.map(t => <span class="tag">{t}</span>)}
+        </footer>
+      )}
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  article { padding: 1.5rem 0 4rem; }
+
+  .back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    transition: color 0.15s var(--ease);
+    animation: fadeUp 0.4s var(--ease) both;
+  }
+
+  .back:hover { color: var(--accent); }
+
+  .back svg { width: 16px; height: 16px; }
+
+  header {
+    margin-bottom: 3rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border);
+    animation: fadeUp 0.4s var(--ease) 0.03s both;
+  }
+
+  .meta {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .cuisine {
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+  }
+
+  .date {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1.75rem;
+    max-width: 700px;
+  }
+
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .val {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+  }
+
+  .content {
+    max-width: 650px;
+    animation: fadeUp 0.4s var(--ease) 0.06s both;
+  }
+
+  .content :global(h2) {
+    font-size: 1.35rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .content :global(h2:first-child) { margin-top: 0; }
+
+  .content :global(h3) {
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .content :global(p) {
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+  }
+
+  .content :global(ul),
+  .content :global(ol) {
+    margin-bottom: 1.25rem;
+    padding-left: 1.25rem;
+    color: var(--text-muted);
+  }
+
+  .content :global(li) {
+    margin-bottom: 0.5rem;
+    padding-left: 0.25rem;
+  }
+
+  .content :global(li::marker) { color: var(--accent); }
+
+  .content :global(strong) {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .content :global(table) {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+  }
+
+  .content :global(th),
+  .content :global(td) {
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .content :global(th) {
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text);
+  }
+
+  .content :global(td) { color: var(--text-muted); }
+
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    animation: fadeUp 0.4s var(--ease) 0.09s both;
+  }
+
+  .tag {
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 0.35rem 0.7rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    color: var(--text-muted);
+  }
+</style>
