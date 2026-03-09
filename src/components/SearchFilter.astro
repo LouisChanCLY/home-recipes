@@ -15,7 +15,7 @@ const { cuisines } = Astro.props;
   <div class="chips" id="cuisine-chips">
     <button class="chip active" data-value="all">All</button>
     {cuisines.map(c => (
-      <button class="chip" data-value={c}>{c}</button>
+      <button class="chip" data-value={c}>{c.charAt(0).toUpperCase() + c.slice(1)}</button>
     ))}
   </div>
 
