@@ -43,8 +43,12 @@ const hasNutrition = calories > 0 || protein > 0 || carbs > 0 || fat > 0;
         </div>
         <h1>{dish}</h1>
         <div class="stats">
-          <div class="stat">
-            <span class="val">{portions}</span>
+          <div class="stat portion-control">
+            <div class="portion-buttons">
+              <button class="portion-btn" id="portion-down" aria-label="Decrease portions">−</button>
+              <span class="val" id="portion-val" data-original={portions}>{portions}</span>
+              <button class="portion-btn" id="portion-up" aria-label="Increase portions">+</button>
+            </div>
             <span class="label">Portions</span>
           </div>
           {hasNutrition && (
@@ -135,10 +139,48 @@ const hasNutrition = calories > 0 || protein > 0 || carbs > 0 || fat > 0;
     gap: 0.2rem;
   }
 
+  .portion-control .portion-buttons {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .portion-btn {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.15s var(--ease);
+  }
+
+  .portion-btn:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .portion-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
   .val {
     font-family: var(--font-display);
     font-size: 1.5rem;
     font-weight: 600;
+  }
+
+  #portion-val {
+    min-width: 2ch;
+    text-align: center;
   }
 
   .label {
@@ -234,4 +276,80 @@ const hasNutrition = calories > 0 || protein > 0 || carbs > 0 || fat > 0;
     border-radius: 100px;
     color: var(--text-muted);
   }
+
+  .scaled { color: var(--accent); }
 </style>
+
+<script>
+  const portionVal = document.getElementById('portion-val')!;
+  const portionDown = document.getElementById('portion-down') as HTMLButtonElement;
+  const portionUp = document.getElementById('portion-up') as HTMLButtonElement;
+  const original = parseFloat(portionVal.dataset.original || '1');
+  let current = original;
+
+  const ingredientLists = document.querySelectorAll('.content ul');
+  const ingredientItems: { el: HTMLElement; original: string }[] = [];
+
+  ingredientLists.forEach(ul => {
+    const prevH2 = ul.previousElementSibling;
+    const prevH3 = ul.previousElementSibling;
+    const isIngredients = prevH2?.textContent?.toLowerCase().includes('ingredient') ||
+                          prevH3?.textContent?.toLowerCase().includes('ingredient');
+    if (!isIngredients) {
+      let prev = ul.previousElementSibling;
+      while (prev && prev.tagName !== 'H2' && prev.tagName !== 'H3') {
+        prev = prev.previousElementSibling;
+      }
+      if (!prev?.textContent?.toLowerCase().includes('ingredient')) return;
+    }
+
+    ul.querySelectorAll('li').forEach(li => {
+      ingredientItems.push({ el: li as HTMLElement, original: li.innerHTML });
+    });
+  });
+
+  function scaleIngredients() {
+    const ratio = current / original;
+
+    ingredientItems.forEach(({ el, original }) => {
+      if (ratio === 1) {
+        el.innerHTML = original;
+        return;
+      }
+
+      el.innerHTML = original.replace(
+        /(\d+(?:\.\d+)?)\s*(g|kg|ml|l|tbsp|tsp|cups?|pieces?)?(?=\s|—|$|\))/gi,
+        (match, num, unit) => {
+          const scaled = parseFloat(num) * ratio;
+          const formatted = scaled % 1 === 0 ? scaled.toString() : scaled.toFixed(1).replace(/\.0$/, '');
+          return `<span class="scaled">${formatted}</span>${unit || ''}`;
+        }
+      );
+    });
+  }
+
+  function updateButtons() {
+    portionDown.disabled = current <= 0.5;
+    portionUp.disabled = current >= 20;
+  }
+
+  portionDown.addEventListener('click', () => {
+    if (current > 0.5) {
+      current = current <= 1 ? current - 0.5 : current - 1;
+      portionVal.textContent = current.toString();
+      scaleIngredients();
+      updateButtons();
+    }
+  });
+
+  portionUp.addEventListener('click', () => {
+    if (current < 20) {
+      current = current < 1 ? current + 0.5 : current + 1;
+      portionVal.textContent = current.toString();
+      scaleIngredients();
+      updateButtons();
+    }
+  });
+
+  updateButtons();
+</script>
