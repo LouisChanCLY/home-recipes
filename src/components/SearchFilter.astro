@@ -1,0 +1,160 @@
+---
+interface Props {
+  cuisines: string[];
+}
+
+const { cuisines } = Astro.props;
+---
+
+<div class="filters">
+  <div class="search-wrap">
+    <input type="text" id="search" placeholder="Search..." autocomplete="off" />
+    <kbd>/</kbd>
+  </div>
+
+  <div class="chips" id="cuisine-chips">
+    <button class="chip active" data-value="all">All</button>
+    {cuisines.map(c => (
+      <button class="chip" data-value={c}>{c}</button>
+    ))}
+  </div>
+
+  <div class="results" id="results"></div>
+</div>
+
+<style>
+  .filters {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    animation: fadeUp 0.4s var(--ease) 0.05s both;
+  }
+
+  .search-wrap {
+    position: relative;
+  }
+
+  #search {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    color: var(--text);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: border-color 0.15s var(--ease);
+  }
+
+  #search:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+
+  #search::placeholder { color: var(--text-dim); }
+
+  kbd {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text-dim);
+    pointer-events: none;
+  }
+
+  #search:focus + kbd { display: none; }
+
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .chip {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.15s var(--ease);
+  }
+
+  .chip:hover {
+    color: var(--text);
+    border-color: #444;
+  }
+
+  .chip.active {
+    color: var(--bg);
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .results {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    min-height: 1.2em;
+  }
+</style>
+
+<script>
+  const search = document.getElementById('search') as HTMLInputElement;
+  const chips = document.querySelectorAll('.chip');
+  const results = document.getElementById('results')!;
+  const grid = document.getElementById('grid');
+  if (!grid) throw new Error('No grid');
+
+  const cards = Array.from(grid.querySelectorAll('.card')) as HTMLElement[];
+  let cuisine = 'all';
+
+  function filter() {
+    const q = search.value.toLowerCase();
+    let count = 0;
+
+    cards.forEach((c, i) => {
+      const title = c.querySelector('h3')?.textContent?.toLowerCase() || '';
+      const tags = c.dataset.tags?.toLowerCase() || '';
+      const cuis = c.dataset.cuisine || '';
+
+      const matchQ = !q || title.includes(q) || tags.includes(q);
+      const matchC = cuisine === 'all' || cuis === cuisine;
+      const show = matchQ && matchC;
+
+      c.style.display = show ? '' : 'none';
+      if (show) {
+        c.style.setProperty('--delay', `${count * 30}ms`);
+        count++;
+      }
+    });
+
+    results.textContent = (q || cuisine !== 'all') ? `${count} found` : '';
+  }
+
+  search.addEventListener('input', filter);
+
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      cuisine = chip.getAttribute('data-value') || 'all';
+      filter();
+    });
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement !== search) {
+      e.preventDefault();
+      search.focus();
+    }
+  });
+</script>
