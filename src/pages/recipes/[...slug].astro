@@ -53,10 +53,10 @@ const hasNutrition = calories > 0 || protein > 0 || carbs > 0 || fat > 0;
           </div>
           {hasNutrition && (
             <>
-              {calories > 0 && <div class="stat"><span class="val">{calories}</span><span class="label">kcal</span></div>}
-              {protein > 0 && <div class="stat"><span class="val">{protein}g</span><span class="label">Protein</span></div>}
-              {carbs > 0 && <div class="stat"><span class="val">{carbs}g</span><span class="label">Carbs</span></div>}
-              {fat > 0 && <div class="stat"><span class="val">{fat}g</span><span class="label">Fat</span></div>}
+              {calories > 0 && <div class="stat"><span class="val nutrition-val" data-original={calories}>{calories}</span><span class="label">kcal</span></div>}
+              {protein > 0 && <div class="stat"><span class="val nutrition-val" data-original={protein}>{protein}g</span><span class="label">Protein</span></div>}
+              {carbs > 0 && <div class="stat"><span class="val nutrition-val" data-original={carbs}>{carbs}g</span><span class="label">Carbs</span></div>}
+              {fat > 0 && <div class="stat"><span class="val nutrition-val" data-original={fat}>{fat}g</span><span class="label">Fat</span></div>}
             </>
           )}
         </div>
@@ -287,6 +287,7 @@ const hasNutrition = calories > 0 || protein > 0 || carbs > 0 || fat > 0;
   const original = parseFloat(portionVal.dataset.original || '1');
   let current = original;
 
+  const nutritionVals = document.querySelectorAll('.nutrition-val') as NodeListOf<HTMLElement>;
   const ingredientLists = document.querySelectorAll('.content ul');
   const ingredientItems: { el: HTMLElement; original: string }[] = [];
 
@@ -308,8 +309,17 @@ const hasNutrition = calories > 0 || protein > 0 || carbs > 0 || fat > 0;
     });
   });
 
-  function scaleIngredients() {
+  function scaleValues() {
     const ratio = current / original;
+
+    nutritionVals.forEach(el => {
+      const originalVal = parseFloat(el.dataset.original || '0');
+      const scaled = originalVal * ratio;
+      const formatted = scaled % 1 === 0 ? scaled.toString() : scaled.toFixed(1);
+      const hasUnit = el.textContent?.includes('g');
+      el.textContent = formatted + (hasUnit ? 'g' : '');
+      el.classList.toggle('scaled', ratio !== 1);
+    });
 
     ingredientItems.forEach(({ el, original }) => {
       if (ratio === 1) {
@@ -337,7 +347,7 @@ const hasNutrition = calories > 0 || protein > 0 || carbs > 0 || fat > 0;
     if (current > 0.5) {
       current = current <= 1 ? current - 0.5 : current - 1;
       portionVal.textContent = current.toString();
-      scaleIngredients();
+      scaleValues();
       updateButtons();
     }
   });
@@ -346,7 +356,7 @@ const hasNutrition = calories > 0 || protein > 0 || carbs > 0 || fat > 0;
     if (current < 20) {
       current = current < 1 ? current + 0.5 : current + 1;
       portionVal.textContent = current.toString();
-      scaleIngredients();
+      scaleValues();
       updateButtons();
     }
   });
