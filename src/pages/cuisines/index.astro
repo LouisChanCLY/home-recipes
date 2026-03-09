@@ -1,0 +1,97 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const recipes = await getCollection('recipes');
+const cuisineMap = new Map<string, number>();
+recipes.forEach(r => {
+  cuisineMap.set(r.data.cuisine, (cuisineMap.get(r.data.cuisine) || 0) + 1);
+});
+const cuisines = Array.from(cuisineMap.entries()).sort((a, b) => b[1] - a[1]);
+const baseUrl = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="Cuisines">
+  <section class="page">
+    <div class="container">
+      <p class="eyebrow">Browse by</p>
+      <h1>Cuisines</h1>
+
+      <div class="grid">
+        {cuisines.map(([name, count], i) => (
+          <a href={`${baseUrl}?cuisine=${name}`} class="card" style={`--delay: ${i * 40}ms`}>
+            <span class="count">{count}</span>
+            <h2>{name}</h2>
+            <span class="label">{count === 1 ? 'recipe' : 'recipes'}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page { padding: 3rem 0; }
+
+  .eyebrow {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+    animation: fadeUp 0.4s var(--ease) both;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    margin-bottom: 3rem;
+    animation: fadeUp 0.4s var(--ease) 0.03s both;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: all 0.2s var(--ease);
+    animation: fadeUp 0.4s var(--ease) var(--delay) both;
+  }
+
+  .card:hover {
+    background: var(--bg-hover);
+    border-color: #333;
+    transform: translateY(-2px);
+  }
+
+  .count {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 0.75rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    margin-bottom: 0.25rem;
+    transition: color 0.15s var(--ease);
+  }
+
+  .card:hover h2 { color: var(--accent); }
+
+  .label {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+  }
+</style>
