@@ -56,7 +56,7 @@
     "file": "recipes/cantonese/onion-prawn-egg-stir-fry.md"
   },
   {
-    "dish": "瑤柱浸黃芽白",
+    "dish": "瑤柱炆椰菜",
     "cuisine": "cantonese",
     "first_made": "2026-03-01",
     "last_made": "2026-03-01",
@@ -98,7 +98,7 @@
     "file": "recipes/fusion/roasted-sweet-potato-okra-cherry-tomatoes.md"
   },
   {
-    "dish": "日式炊飯 (Japanese Salmon Rice)",
+    "dish": "日式鮭魚飯 (Japanese Salmon Rice)",
     "cuisine": "japanese",
     "first_made": "2026-02-23",
     "last_made": "2026-02-23",
@@ -108,7 +108,7 @@
     "protein": 0,
     "carbs": 0,
     "fat": 0,
-    "tags": ["japanese", "salmon", "rice", "炊飯", "dinner"],
+    "tags": ["japanese", "salmon", "rice", "鮭魚飯", "dinner"],
     "file": "recipes/simple/salmon-and-rice.md"
   },
   {
@@ -124,5 +124,19 @@
     "fat": 0,
     "tags": ["japanese", "prawn", "okonomiyaki", "pancake", "cabbage"],
     "file": "recipes/japanese/prawn-okonomiyaki-cranberry.md"
+  },
+  {
+    "dish": "Teriyaki Chicken",
+    "cuisine": "japanese",
+    "first_made": "2026-03-09",
+    "last_made": "2026-03-09",
+    "cook_history": ["2026-03-09"],
+    "portions": 3,
+    "calories": 647,
+    "protein": 36,
+    "carbs": 92,
+    "fat": 17,
+    "tags": ["japanese", "chicken", "teriyaki", "dinner", "rice"],
+    "file": "recipes/japanese/teriyaki-chicken.md"
   }
 ]
