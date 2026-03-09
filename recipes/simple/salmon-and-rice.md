@@ -15,10 +15,10 @@ tags: [japanese, salmon, rice, 炊飯, dinner]
 - Rice (raw) — 210g (348 kcal/100g)
 
 ## Method Notes
-炊飯 — rice and salmon cooked together in the rice cooker or pot.
-The salmon infuses the rice with its fat and flavour as it steams.
-Season the rice with soy sauce, mirin, sake before cooking.
-Flake the salmon through the rice once done and serve.
+- 炊飯 — rice and salmon cooked together in the rice cooker or pot.
+- The salmon infuses the rice with its fat and flavour as it steams.
+- Season the rice with soy sauce, mirin, sake before cooking.
+- Flake the salmon through the rice once done and serve.
 
 ## Nutrition Notes
 Per portion (÷3): ~433 kcal.

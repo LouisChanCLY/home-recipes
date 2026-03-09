@@ -17,10 +17,10 @@ tags: [pasta, quick, lunch]
 - Fresh thyme — small handful
 
 ## Method Notes
-Garlic and thyme sweated low in butter on gentle heat — no browning, just fragrance.
-Pasta cooked per pack instructions. Splash of pasta water reserved before draining.
-Tossed pasta through the butter off heat with pasta water to emulsify into a light sauce.
-Classic Northern Italian — no cream, no cheese, let the prosciutto filling do the work.
+- Garlic and thyme sweated low in butter on gentle heat — no browning, just fragrance.
+- Pasta cooked per pack instructions. Splash of pasta water reserved before draining.
+- Tossed pasta through the butter off heat with pasta water to emulsify into a light sauce.
+- Classic Northern Italian — no cream, no cheese, let the prosciutto filling do the work.
 
 ## Ideas & Variations
 - Could try sage instead of thyme for a more traditional burro e salvia approach

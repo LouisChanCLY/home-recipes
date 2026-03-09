@@ -18,10 +18,10 @@ tags: [cantonese, scallop, cabbage, braise, dinner]
 - Cooking oil — ~5g (estimated)
 
 ## Method Notes
-Soak 瑤柱 in warm water 30 mins, shred, keep soaking liquid — use it as the braising liquid, it's full of flavour.
-Braise Chinese leaf gently in the 瑤柱 broth with oyster sauce.
-Add 粉絲 partway through to soak up the broth.
-No onion — keep the braise clean. Ginger slices only.
+- Soak 瑤柱 in warm water 30 mins, shred, keep soaking liquid — use it as the braising liquid, it's full of flavour.
+- Braise Chinese leaf gently in the 瑤柱 broth with oyster sauce.
+- Add 粉絲 partway through to soak up the broth.
+- No onion — keep the braise clean. Ginger slices only.
 
 ## Ideas & Variations
 - Goji berries (杞子) for sweetness and colour

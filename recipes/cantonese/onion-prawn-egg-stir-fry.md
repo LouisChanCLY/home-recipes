@@ -19,10 +19,10 @@ tags: [cantonese, egg, prawn, stir-fry, dinner]
 - Cooking oil — ~12g (estimated)
 
 ## Method Notes
-Marinate prawns in soy and sesame oil briefly.
-High heat, wok hei essential. Cook prawns first until just pink, remove.
-Beat eggs well. Return prawns with eggs and toss quickly — don't overcook.
-8 eggs for 3 people gives a proper 滑蛋 texture.
+- Marinate prawns in soy and sesame oil briefly.
+- High heat, wok hei essential. Cook prawns first until just pink, remove.
+- Beat eggs well. Return prawns with eggs and toss quickly — don't overcook.
+- 8 eggs for 3 people gives a proper 滑蛋 texture.
 
 ## Ideas & Variations
 - Splash of Shaoxing wine when prawns hit the wok for 鑊氣

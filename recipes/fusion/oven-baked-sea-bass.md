@@ -14,8 +14,8 @@ tags: [fish, seabass, oven, dinner]
 - Sea bass — 392.2g (127 kcal/100g)
 
 ## Method Notes
-Roast in oven alongside the vegetables.
-Sea bass added partway through roasting so it doesn't overcook.
+- Roast in oven alongside the vegetables.
+- Sea bass added partway through roasting so it doesn't overcook.
 
 ## Ideas & Variations
 - Yuzu dressing drizzled over at the end

@@ -22,10 +22,10 @@ tags: [cantonese, chicken, rice, wine-braise, dinner]
 - Rice (raw) — 210g
 
 ## Method Notes
-Classic wine braise — pour the wine generously, it's the whole point of the dish.
-Chicken braised low and slow with the aromatics until tender.
-Vegetables added partway through so they don't overcook.
-Rice steamed separately.
+- Classic wine braise — pour the wine generously, it's the whole point of the dish.
+- Chicken braised low and slow with the aromatics until tender.
+- Vegetables added partway through so they don't overcook.
+- Rice steamed separately.
 
 ## Nutrition Notes
 Per portion (÷3): ~415 kcal using 130 kcal/100g raw chicken estimate.

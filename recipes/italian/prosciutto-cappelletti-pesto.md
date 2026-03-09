@@ -18,11 +18,11 @@ tags: [pasta, quick, lunch, pesto]
 - La Nina extra virgin olive oil — 2.4g
 
 ## Method Notes
-Toast pine nuts dry in a pan on medium heat, 2–3 minutes until golden. Set aside.
-Cook cappelletti per pack instructions. Reserve a generous splash of pasta water before draining.
-Off the heat, toss pasta with pesto and pasta water until it coats properly — don't heat the pesto.
-Add a few drops of ginger yuzu vinegar for acidity and brightness.
-Plate, scatter toasted pine nuts on top, drizzle EVOO to finish.
+- Toast pine nuts dry in a pan on medium heat, 2–3 minutes until golden. Set aside.
+- Cook cappelletti per pack instructions. Reserve a generous splash of pasta water before draining.
+- Off the heat, toss pasta with pesto and pasta water until it coats properly — don't heat the pesto.
+- Add a few drops of ginger yuzu vinegar for acidity and brightness.
+- Plate, scatter toasted pine nuts on top, drizzle EVOO to finish.
 
 ## Ideas & Variations
 - Cherry tomatoes halved and warmed through would add sweetness and extra acidity

@@ -20,10 +20,10 @@ tags: [veg, roasted, side, dinner, yuzu]
 - Yuzu dressing — 12g (334 kcal/100ml)
 
 ## Method Notes
-Okra: trim only the stem end (hard woody cap). Leave the tail — it crisps up nicely. Halve lengthways.
-Roast sweet potato and red onion first as they take longer.
-Add okra and cherry tomatoes partway through.
-Yuzu dressing drizzled over at the end — don't roast it in.
+- Okra: trim only the stem end (hard woody cap). Leave the tail — it crisps up nicely. Halve lengthways.
+- Roast sweet potato and red onion first as they take longer.
+- Add okra and cherry tomatoes partway through.
+- Yuzu dressing drizzled over at the end — don't roast it in.
 
 ## Nutrition Notes
 Per portion (÷3): ~247 kcal including oil and dressing.

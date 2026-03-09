@@ -29,19 +29,19 @@ tags: [japanese, prawn, okonomiyaki, pancake, cabbage]
 - Spring onion, sliced
 
 ## Method Notes
-Mix sauce ingredients together, set aside.
-Shred cabbage very finely — the thinner the better.
-Whisk flour, eggs, dashi, salt until smooth.
-Fold in cabbage — should be thick and chunky, more cabbage than batter.
-Roughly chop half the prawns and fold in. Keep the rest whole.
-Medium heat, non-stick pan with a little oil.
-Spoon half the batter in, shape into a round ~2cm thick.
-Press whole prawns into the top.
-Cook 3-4 mins until bottom is golden and set enough to flip.
-Flip prawn-side down, cook another 3-4 mins.
-Flip once more so prawns face up.
-Drizzle cranberry sauce, zigzag kewpie, bonito flakes, spring onion.
-Eat immediately.
+- Mix sauce ingredients together, set aside.
+- Shred cabbage very finely — the thinner the better.
+- Whisk flour, eggs, dashi, salt until smooth.
+- Fold in cabbage — should be thick and chunky, more cabbage than batter.
+- Roughly chop half the prawns and fold in. Keep the rest whole.
+- Medium heat, non-stick pan with a little oil.
+- Spoon half the batter in, shape into a round ~2cm thick.
+- Press whole prawns into the top.
+- Cook 3-4 mins until bottom is golden and set enough to flip.
+- Flip prawn-side down, cook another 3-4 mins.
+- Flip once more so prawns face up.
+- Drizzle cranberry sauce, zigzag kewpie, bonito flakes, spring onion.
+- Eat immediately.
 
 ## Ideas & Variations
 - Leftover cranberry sauce is the key ingredient here — the sweet-tangy sauce works perfectly against the savoury pancake
