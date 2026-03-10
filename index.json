@@ -138,5 +138,19 @@
     "fat": 17,
     "tags": ["japanese", "chicken", "teriyaki", "dinner", "rice"],
     "file": "recipes/japanese/teriyaki-chicken.md"
+  },
+  {
+    "dish": "Steamed Sea Bass with Chinese Sausage and Leek",
+    "cuisine": "cantonese",
+    "first_made": "2026-03-10",
+    "last_made": "2026-03-10",
+    "cook_history": ["2026-03-10"],
+    "portions": 3,
+    "calories": 299,
+    "protein": 28,
+    "carbs": 5,
+    "fat": 17,
+    "tags": ["cantonese", "fish", "seabass", "steamed", "dinner", "chinese-sausage"],
+    "file": "recipes/cantonese/steamed-seabass-chinese-sausage-leek.md"
   }
 ]
