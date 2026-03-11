@@ -98,7 +98,7 @@
     "file": "recipes/fusion/roasted-sweet-potato-okra-cherry-tomatoes.md"
   },
   {
-    "dish": "日式鮭魚飯 (Japanese Salmon Rice)",
+    "dish": "日本鮭魚飯 (Japanese Salmon Rice)",
     "cuisine": "japanese",
     "first_made": "2026-02-23",
     "last_made": "2026-02-23",
@@ -152,5 +152,19 @@
     "fat": 17,
     "tags": ["cantonese", "fish", "seabass", "steamed", "dinner", "chinese-sausage"],
     "file": "recipes/cantonese/steamed-seabass-chinese-sausage-leek.md"
+  },
+  {
+    "dish": "Roast Chicken Wings with Root Veg & Yuzu Dressing",
+    "cuisine": "fusion",
+    "first_made": "2026-03-11",
+    "last_made": "2026-03-11",
+    "cook_history": ["2026-03-11"],
+    "portions": 3,
+    "calories": 601,
+    "protein": 29,
+    "carbs": 42,
+    "fat": 34,
+    "tags": ["chicken", "wings", "roast", "veg", "yuzu", "dinner", "simple"],
+    "file": "recipes/fusion/roast-chicken-wings-root-veg-yuzu.md"
   }
 ]
