@@ -42,7 +42,7 @@
     "file": "recipes/cantonese/hua-diao-chicken.md"
   },
   {
-    "dish": "洋葱炒蛋炒蝦仁",
+    "dish": "洋蔥蝦仁炒蛋",
     "cuisine": "cantonese",
     "first_made": "2026-03-01",
     "last_made": "2026-03-01",
@@ -56,7 +56,7 @@
     "file": "recipes/cantonese/onion-prawn-egg-stir-fry.md"
   },
   {
-    "dish": "瑤柱炆椰菜心",
+    "dish": "瑤柱椰菜花椰菜燜",
     "cuisine": "cantonese",
     "first_made": "2026-03-01",
     "last_made": "2026-03-01",
@@ -180,5 +180,33 @@
     "fat": 22,
     "tags": ["cantonese", "chicken", "steamed", "shiitake", "lap-cheong", "dinner", "rice"],
     "file": "recipes/cantonese/shiitake-lap-cheong-steamed-chicken.md"
+  },
+  {
+    "dish": "Saba no Miso Ni (Mackerel Braised in Miso)",
+    "cuisine": "japanese",
+    "first_made": "2026-03-13",
+    "last_made": "2026-03-13",
+    "cook_history": ["2026-03-13"],
+    "portions": 2,
+    "calories": 568,
+    "protein": 27,
+    "carbs": 79,
+    "fat": 15,
+    "tags": ["fish", "mackerel", "miso", "braise", "dinner", "japanese", "rice"],
+    "file": "recipes/japanese/saba-no-miso-ni.md"
+  },
+  {
+    "dish": "Warm Nibitashi (Chinese Leaf and Carrot)",
+    "cuisine": "japanese",
+    "first_made": "2026-03-13",
+    "last_made": "2026-03-13",
+    "cook_history": ["2026-03-13"],
+    "portions": 2,
+    "calories": 61,
+    "protein": 2.3,
+    "carbs": 11,
+    "fat": 0.1,
+    "tags": ["vegetables", "side", "japanese", "dashi", "cabbage", "carrot", "nibitashi", "dinner"],
+    "file": "recipes/japanese/warm-nibitashi-chinese-leaf-carrot.md"
   }
 ]
