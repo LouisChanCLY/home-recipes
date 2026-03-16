@@ -28,7 +28,7 @@
     "file": "recipes/italian/prosciutto-cappelletti-pesto.md"
   },
   {
-    "dish": "花雕雞 (Hua Diao Chicken)",
+    "dish": "煲仔雞 (Hua Diao Chicken)",
     "cuisine": "cantonese",
     "first_made": "2026-02-19",
     "last_made": "2026-02-19",
@@ -42,7 +42,7 @@
     "file": "recipes/cantonese/hua-diao-chicken.md"
   },
   {
-    "dish": "洋蔥蝦仁炒蛋",
+    "dish": "蝦仁炒蛋洋蔥",
     "cuisine": "cantonese",
     "first_made": "2026-03-01",
     "last_made": "2026-03-01",
@@ -56,7 +56,7 @@
     "file": "recipes/cantonese/onion-prawn-egg-stir-fry.md"
   },
   {
-    "dish": "瑤柱椰菜花椰菜燜",
+    "dish": "瑤柱炆椰菜花",
     "cuisine": "cantonese",
     "first_made": "2026-03-01",
     "last_made": "2026-03-01",
@@ -98,7 +98,7 @@
     "file": "recipes/fusion/roasted-sweet-potato-okra-cherry-tomatoes.md"
   },
   {
-    "dish": "日本鮭魚飯 (Japanese Salmon Rice)",
+    "dish": "日式鮭魚飯 (Japanese Salmon Rice)",
     "cuisine": "japanese",
     "first_made": "2026-02-23",
     "last_made": "2026-02-23",
@@ -208,5 +208,19 @@
     "fat": 0.1,
     "tags": ["vegetables", "side", "japanese", "dashi", "cabbage", "carrot", "nibitashi", "dinner"],
     "file": "recipes/japanese/warm-nibitashi-chinese-leaf-carrot.md"
+  },
+  {
+    "dish": "Pesto Salmon with Roasted Veg",
+    "cuisine": "fusion",
+    "first_made": "2026-03-16",
+    "last_made": "2026-03-16",
+    "cook_history": ["2026-03-16"],
+    "portions": 3,
+    "calories": 624,
+    "protein": 38,
+    "carbs": 32,
+    "fat": 37,
+    "tags": ["salmon", "roast", "veg", "pesto", "dinner", "sweet-potato", "yuzu"],
+    "file": "recipes/fusion/pesto-salmon-roasted-veg.md"
   }
 ]
