@@ -28,7 +28,7 @@
     "file": "recipes/italian/prosciutto-cappelletti-pesto.md"
   },
   {
-    "dish": "煲仔雞 (Hua Diao Chicken)",
+    "dish": "花雕雞 (Hua Diao Chicken)",
     "cuisine": "cantonese",
     "first_made": "2026-02-19",
     "last_made": "2026-02-19",
@@ -42,7 +42,7 @@
     "file": "recipes/cantonese/hua-diao-chicken.md"
   },
   {
-    "dish": "蝦仁炒蛋洋蔥",
+    "dish": "洋蔥蝦仁炒蛋",
     "cuisine": "cantonese",
     "first_made": "2026-03-01",
     "last_made": "2026-03-01",
@@ -56,7 +56,7 @@
     "file": "recipes/cantonese/onion-prawn-egg-stir-fry.md"
   },
   {
-    "dish": "瑤柱炆椰菜花",
+    "dish": "瑤柱炆椰菜炆肉絲",
     "cuisine": "cantonese",
     "first_made": "2026-03-01",
     "last_made": "2026-03-01",
@@ -98,7 +98,7 @@
     "file": "recipes/fusion/roasted-sweet-potato-okra-cherry-tomatoes.md"
   },
   {
-    "dish": "日式鮭魚飯 (Japanese Salmon Rice)",
+    "dish": "日本鮭魚飯 (Japanese Salmon Rice)",
     "cuisine": "japanese",
     "first_made": "2026-02-23",
     "last_made": "2026-02-23",
@@ -168,7 +168,7 @@
     "file": "recipes/fusion/roast-chicken-wings-root-veg-yuzu.md"
   },
   {
-    "dish": "冬菇臘腸蒸雞 (Shiitake & Chinese Sausage Steamed Chicken)",
+    "dish": "椎茸腊肠蒸鸡 (Shiitake & Chinese Sausage Steamed Chicken)",
     "cuisine": "cantonese",
     "first_made": "2026-03-12",
     "last_made": "2026-03-12",
@@ -222,5 +222,19 @@
     "fat": 37,
     "tags": ["salmon", "roast", "veg", "pesto", "dinner", "sweet-potato", "yuzu"],
     "file": "recipes/fusion/pesto-salmon-roasted-veg.md"
+  },
+  {
+    "dish": "Gochujang Garlic Soy Chicken with Sweet Potato Vermicelli",
+    "cuisine": "korean",
+    "first_made": "2026-03-18",
+    "last_made": "2026-03-18",
+    "cook_history": ["2026-03-18"],
+    "portions": 3,
+    "calories": 598,
+    "protein": 35,
+    "carbs": 57,
+    "fat": 25,
+    "tags": ["korean", "chicken", "oven", "lunchbox", "glass-noodles", "vermicelli", "gochujang", "meal-prep"],
+    "file": "recipes/korean/gochujang-garlic-soy-chicken-sweet-potato-vermicelli.md"
   }
 ]
