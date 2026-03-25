@@ -56,7 +56,7 @@
     "file": "recipes/cantonese/onion-prawn-egg-stir-fry.md"
   },
   {
-    "dish": "瑤柱炆椰菜炆肉絲",
+    "dish": "瑤柱炆椰菜 瑤柱埋尾",
     "cuisine": "cantonese",
     "first_made": "2026-03-01",
     "last_made": "2026-03-01",
@@ -168,7 +168,7 @@
     "file": "recipes/fusion/roast-chicken-wings-root-veg-yuzu.md"
   },
   {
-    "dish": "椎茸腊肠蒸鸡 (Shiitake & Chinese Sausage Steamed Chicken)",
+    "dish": "椎茸臘腸蒸雞 (Shiitake & Chinese Sausage Steamed Chicken)",
     "cuisine": "cantonese",
     "first_made": "2026-03-12",
     "last_made": "2026-03-12",
@@ -236,5 +236,19 @@
     "fat": 25,
     "tags": ["korean", "chicken", "oven", "lunchbox", "glass-noodles", "vermicelli", "gochujang", "meal-prep"],
     "file": "recipes/korean/gochujang-garlic-soy-chicken-sweet-potato-vermicelli.md"
+  },
+  {
+    "dish": "Pesto Roasted Chicken & Veg",
+    "cuisine": "fusion",
+    "first_made": "2026-03-25",
+    "last_made": "2026-03-25",
+    "cook_history": ["2026-03-25"],
+    "portions": 3,
+    "calories": 632,
+    "protein": 40,
+    "carbs": 55,
+    "fat": 28,
+    "tags": ["chicken", "roast", "veg", "pesto", "sweet-potato", "yuzu", "pine-nuts", "dinner"],
+    "file": "recipes/fusion/pesto-roasted-chicken-veg.md"
   }
 ]
