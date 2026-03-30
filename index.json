@@ -42,7 +42,7 @@
     "file": "recipes/cantonese/hua-diao-chicken.md"
   },
   {
-    "dish": "洋蔥蝦仁炒蛋",
+    "dish": "滑蛋蝦仁炒蛋",
     "cuisine": "cantonese",
     "first_made": "2026-03-01",
     "last_made": "2026-03-01",
@@ -56,7 +56,7 @@
     "file": "recipes/cantonese/onion-prawn-egg-stir-fry.md"
   },
   {
-    "dish": "瑤柱炆椰菜 瑤柱埋尾",
+    "dish": "乾貝燜椰菜 乾貝燜椰菜",
     "cuisine": "cantonese",
     "first_made": "2026-03-01",
     "last_made": "2026-03-01",
@@ -98,7 +98,7 @@
     "file": "recipes/fusion/roasted-sweet-potato-okra-cherry-tomatoes.md"
   },
   {
-    "dish": "日本鮭魚飯 (Japanese Salmon Rice)",
+    "dish": "燒魚親子飯 (Japanese Salmon Rice)",
     "cuisine": "japanese",
     "first_made": "2026-02-23",
     "last_made": "2026-02-23",
@@ -108,7 +108,7 @@
     "protein": 0,
     "carbs": 0,
     "fat": 0,
-    "tags": ["japanese", "salmon", "rice", "鮭魚飯", "dinner"],
+    "tags": ["japanese", "salmon", "rice", "親子飯", "dinner"],
     "file": "recipes/simple/salmon-and-rice.md"
   },
   {
@@ -224,18 +224,32 @@
     "file": "recipes/fusion/pesto-salmon-roasted-veg.md"
   },
   {
-    "dish": "Gochujang Garlic Soy Chicken with Sweet Potato Vermicelli",
+    "dish": "Gochujang Garlic Soy Chicken",
     "cuisine": "korean",
     "first_made": "2026-03-18",
     "last_made": "2026-03-18",
     "cook_history": ["2026-03-18"],
     "portions": 3,
-    "calories": 598,
-    "protein": 35,
-    "carbs": 57,
-    "fat": 25,
-    "tags": ["korean", "chicken", "oven", "lunchbox", "glass-noodles", "vermicelli", "gochujang", "meal-prep"],
-    "file": "recipes/korean/gochujang-garlic-soy-chicken-sweet-potato-vermicelli.md"
+    "calories": 420,
+    "protein": 30,
+    "carbs": 15,
+    "fat": 27,
+    "tags": ["korean", "chicken", "oven", "gochujang", "lunchbox", "dinner", "meal-prep"],
+    "file": "recipes/korean/gochujang-garlic-soy-chicken.md"
+  },
+  {
+    "dish": "Sweet Potato Vermicelli with Quick Pickled Carrots",
+    "cuisine": "korean",
+    "first_made": "2026-03-18",
+    "last_made": "2026-03-18",
+    "cook_history": ["2026-03-18"],
+    "portions": 3,
+    "calories": 178,
+    "protein": 4,
+    "carbs": 42,
+    "fat": 2,
+    "tags": ["korean", "noodles", "glass-noodles", "vermicelli", "pickled", "side", "lunchbox", "meal-prep", "vegan"],
+    "file": "recipes/korean/sweet-potato-vermicelli-pickled-carrots.md"
   },
   {
     "dish": "Pesto Roasted Chicken & Veg",
